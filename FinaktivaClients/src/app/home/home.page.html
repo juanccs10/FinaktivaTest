@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title size="large"><img src="./assets/img/finaktiva-logo.png"></ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+<div class="main-container">
+  <div id="container" class="ion-padding">
+    <div class="head">
+      <div class="title">
+        <h3>Clientes <span>({{CClients}} Clientes)</span></h3>
+      </div>
+      <div class="options">
+        <ion-button shape="round"mode="ios" color="primary"(click)="openNewClient()">
+          Nuevo Cliente
+          <ion-icon slot="end" name="add-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </div>
+    <div class="body">
+      <table>
+        <thead>
+          <tr>
+            <th>Nombres</th>
+            <th>Tipo de documento</th>
+            <th>Número de documento</th>
+            <th>Razón social</th>
+            <th></th>
+          </tr>
+        </thead>
+  
+        <tbody>
+          <tr *ngFor="let Client of Clients">
+            <td>{{Client['fullName']}}</td>
+            <td>{{identificationTypes[Client['identificationType']]}}</td>
+            <td>{{Client['identification']}}</td>
+            <td>{{Client['socialReasoning']}}</td>
+            <td>
+              <ion-button size="small" slot="icon-only" color="danger" fill="outline" (click) = "deleteClient(Client?.clientId)"><ion-icon name="trash-outline"></ion-icon></ion-button>
+              <ion-button size="small" slot="icon-only" color="warning" fill="outline" (click)="openEditClient(Client?.clientId)"><ion-icon name="create-outline"></ion-icon></ion-button>
+              <ion-button size="small" slot="icon-only" color="primary" fill="outline" (click)="openViewClient(Client?.clientId)"><ion-icon name="eye-outline"></ion-icon></ion-button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+</div>
+</ion-content>

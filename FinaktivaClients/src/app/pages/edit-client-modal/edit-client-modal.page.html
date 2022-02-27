@@ -1,0 +1,95 @@
+<ion-header mode="ios" class="ion-no-border">
+  <ion-toolbar>
+    <h1>Editar Cliente</h1>
+    <ion-buttons slot="end" (click)="closeModal()">
+      <ion-icon slot="icon-only" name="close-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form [formGroup]="ClientForm" (ngSubmit)="saveClient($event)">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-col>
+            <ion-item lines="none">
+              <ion-label position="floating" color="primary">Nombres</ion-label>
+              <ion-input type="text" formControlName="fullName" placeholder="Nombres"></ion-input>
+            </ion-item>
+            <div *ngIf="(fullName.dirty || fullName.touched) && fullName.errors" class="errors">
+              <span *ngIf="fullName.errors?.required">El nombre es requerido</span>
+            </div>
+          </ion-col>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <ion-item lines="none">
+            <ion-label position="stacked" color="primary">Tipo de Identificación</ion-label>
+            <ion-select placeholder="Tipo de Identificación" okText="Seleccionar" cancelText="Cancelar" formControlName="identificationType">
+              <ion-select-option *ngFor="let type of IdentificationTypes" [value]="type.r">
+                {{type?.['d']}}
+              </ion-select-option>
+            </ion-select>
+          </ion-item>
+          <div *ngIf="(identificationType.dirty || identificationType.touched) && identificationType.errors" class="errors">
+            <span *ngIf="identificationType.errors?.required">El tipo de identificación es requerido</span>
+          </div>
+        </ion-col>
+        <ion-col size="6">
+          <ion-item lines="none">
+            <ion-label position="floating" color="primary">Número de Identificación</ion-label>
+            <ion-input type="text" formControlName="identification" placeholder="Número de Identificación"></ion-input>
+          </ion-item>
+          <div *ngIf="(identification.dirty || identification.touched) && identificationType.errors" class="errors">
+            <span *ngIf="identification.errors?.required">El número de identificación es requerido</span>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item lines="none">
+            <ion-label position="floating" color="primary">Razón social</ion-label>
+            <ion-input type="text" formControlName="socialReasoning" placeholder="Razón Social"></ion-input>
+          </ion-item>
+          <div *ngIf="(socialReasoning.dirty || socialReasoning.touched) && socialReasoning.errors" class="errors">
+            <span *ngIf="socialReasoning.errors?.required">El número de identificación es requerido</span>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <ion-item lines="none">
+            <ion-label position="floating" color="primary">Proveedores</ion-label>
+            <ion-input type="number" value="1" formControlName="providers" placeholder="Proveedores"></ion-input>
+          </ion-item>
+          <div *ngIf="(providers.dirty || providers.touched) && providers.errors" class="errors">
+            <span *ngIf="providers.errors?.required"># Proveedores</span>
+          </div>
+        </ion-col>
+        <ion-col size="6">
+          <ion-item lines="none">
+            <ion-label position="floating" color="primary">Ventas del ultimo año</ion-label>
+            <ion-input type="number" value="1" formControlName="lastYearSales" placeholder="Ventas del Ultimo Año"></ion-input>
+          </ion-item>
+          <div *ngIf="(lastYearSales.dirty || lastYearSales.touched) && lastYearSales.errors" class="errors">
+            <span *ngIf="lastYearSales.errors?.required"># Proveedores</span>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row class="buttons">
+        <ion-button
+            shape="round"
+            mode="ios"
+            color="primary"
+            (click)="saveClient('Save')"
+            [disabled]="!ClientForm.valid"
+          >
+            Aplicar Cambios
+            <ion-icon slot="end" name="save-outline"></ion-icon>
+          </ion-button>
+      </ion-row>
+    </ion-grid>
+
+  </form>
+</ion-content>
