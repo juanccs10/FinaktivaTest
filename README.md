@@ -4,11 +4,7 @@
 
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="sources/finaktiva-logo.png" alt="Logo" height="80">
-  </a>
-
-  <h3 align="center">FinaktivaTest</h3>
+  <h1 align="center">FinaktivaTest</h3>
 
   <p align="center">
     Gestión de clientes utilizando Angular, Ionic, .NetCore
@@ -32,6 +28,10 @@ Gestión de Clientes
 * [Entity Framework](https://docs.microsoft.com/en-us/ef/)
 * [Swagger](https://swagger.io/)
 
+## Pre-requisitos
+1. [.Net core 6 SDK](https://dotnet.microsoft.com/en-us/download)
+2. [Visual studio 2019](https://www.visualstudio.com/) OR [VSCode](https://code.visualstudio.com/) with [C#](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) extension
+3. [NodeJs](https://nodejs.org/en/) (Latest LTS)
 
 ## Como Iniciar
 
@@ -50,7 +50,7 @@ Gestión de Clientes
    ```sh
    cd FinaktivaClients
    npm install
-   ionic serve
+   npm start
    ```
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/juan-cuao/
