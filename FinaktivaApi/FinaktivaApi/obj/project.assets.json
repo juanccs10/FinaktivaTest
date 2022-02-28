@@ -9622,11 +9622,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\usrdesa9\\source\\repos\\FinaktivaApi\\FinaktivaApi\\FinaktivaApi.csproj",
+      "projectUniqueName": "C:\\Users\\usrdesa9\\OneDrive - Syspotec\\Documentos\\GitHub\\FinaktivaApi\\FinaktivaApi\\FinaktivaApi.csproj",
       "projectName": "FinaktivaApi",
-      "projectPath": "C:\\Users\\usrdesa9\\source\\repos\\FinaktivaApi\\FinaktivaApi\\FinaktivaApi.csproj",
+      "projectPath": "C:\\Users\\usrdesa9\\OneDrive - Syspotec\\Documentos\\GitHub\\FinaktivaApi\\FinaktivaApi\\FinaktivaApi.csproj",
       "packagesPath": "C:\\Users\\usrdesa9\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\usrdesa9\\source\\repos\\FinaktivaApi\\FinaktivaApi\\obj\\",
+      "outputPath": "C:\\Users\\usrdesa9\\OneDrive - Syspotec\\Documentos\\GitHub\\FinaktivaApi\\FinaktivaApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
